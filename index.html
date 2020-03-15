@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Hexo
+     观海
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -35,7 +35,7 @@
       <img src="/images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
+      <h1><a href="/">观海</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -94,36 +94,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h1 id="mpvue小程序制作中遇到的问题"><a href="#mpvue小程序制作中遇到的问题" class="headerlink" title="mpvue小程序制作中遇到的问题"></a>mpvue小程序制作中遇到的问题</h1><h2 id="一、小程序api问题"><a href="#一、小程序api问题" class="headerlink" title="一、小程序api问题"></a>一、小程序api问题</h2><h3 id="1、图片无法100-宽度自适应"><a href="#1、图片无法100-宽度自适应" class="headerlink" title="1、图片无法100%宽度自适应"></a>1、图片无法100%宽度自适应</h3><p>在html标签里面修改mode</p>
-<h3 id="2、软键盘右下角的回车事件怎么设置"><a href="#2、软键盘右下角的回车事件怎么设置" class="headerlink" title="2、软键盘右下角的回车事件怎么设置"></a>2、软键盘右下角的回车事件怎么设置</h3><p>confirm-type=”XXXX” @confirm=”XXXXXX()”</p>
-<h2 id="二、vant-weapp-问题"><a href="#二、vant-weapp-问题" class="headerlink" title="二、vant weapp 问题"></a>二、vant weapp 问题</h2><h3 id="1、导入vant-weapp"><a href="#1、导入vant-weapp" class="headerlink" title="1、导入vant-weapp"></a>1、导入vant-weapp</h3><p>在static下建立vant文件夹（重要，不能起别的名称）然后将vant官方git里的dist文件夹内容导入，并在main.json里面配置.</p>
-<h3 id="2、vant的Field输入不会自动双向绑定"><a href="#2、vant的Field输入不会自动双向绑定" class="headerlink" title="2、vant的Field输入不会自动双向绑定"></a>2、vant的Field输入不会自动双向绑定</h3><p>监听@change事件手动绑定，当改变的时候动态修改field绑定的数值；</p>
-<h3 id="3、外部样式无法起作用（例如swipeCell的左右拉动区域）"><a href="#3、外部样式无法起作用（例如swipeCell的左右拉动区域）" class="headerlink" title="3、外部样式无法起作用（例如swipeCell的左右拉动区域）"></a>3、外部样式无法起作用（例如swipeCell的左右拉动区域）</h3><p>去掉vue组件style标签的scoped属性，才能修改源码中的代码；（css）</p>
-<h3 id="4、swipeCell绑定的left-width和right-width是px单位"><a href="#4、swipeCell绑定的left-width和right-width是px单位" class="headerlink" title="4、swipeCell绑定的left-width和right-width是px单位"></a>4、swipeCell绑定的left-width和right-width是px单位</h3><p>手动修改源码</p>
-<h3 id="5、不能使用click-icon这种类型的监听方法"><a href="#5、不能使用click-icon这种类型的监听方法" class="headerlink" title="5、不能使用click-icon这种类型的监听方法"></a>5、不能使用click-icon这种类型的监听方法</h3><p>手动将vant源码换成驼峰表示法</p>
-<h2 id="三、mpvue问题"><a href="#三、mpvue问题" class="headerlink" title="三、mpvue问题"></a>三、mpvue问题</h2><h3 id="1、vue原生事件不能触发"><a href="#1、vue原生事件不能触发" class="headerlink" title="1、vue原生事件不能触发"></a>1、vue原生事件不能触发</h3><p>bind:clickIcon需要写成@clickIcon</p>
-<h3 id="2、模板字符串中无法使用method中的方法"><a href="#2、模板字符串中无法使用method中的方法" class="headerlink" title="2、模板字符串中无法使用method中的方法"></a>2、模板字符串中无法使用method中的方法</h3><p>无解决方法</p>
-<h3 id="3、mouted生命周期中无法获取props中的值"><a href="#3、mouted生命周期中无法获取props中的值" class="headerlink" title="3、mouted生命周期中无法获取props中的值"></a>3、mouted生命周期中无法获取props中的值</h3><p>添加watch监听数值变化，变化后执行操作</p>
-<h3 id="4、双层v-for异步请求速度导致渲染的时候没有数据"><a href="#4、双层v-for异步请求速度导致渲染的时候没有数据" class="headerlink" title="4、双层v-for异步请求速度导致渲染的时候没有数据"></a>4、双层v-for异步请求速度导致渲染的时候没有数据</h3><p>①使用轮询判断有无获取到数据，获取到再赋值②设置0.3的延迟时间等待数据</p>
-<h3 id="5、v-for循环对象没有结果"><a href="#5、v-for循环对象没有结果" class="headerlink" title="5、v-for循环对象没有结果"></a>5、v-for循环对象没有结果</h3><p>操作对象使用this.$set 方法添加响应式数据。否则无法获取</p>
-<h3 id="6、mpvue解决事件冒泡"><a href="#6、mpvue解决事件冒泡" class="headerlink" title="6、mpvue解决事件冒泡"></a>6、mpvue解决事件冒泡</h3><p>@click添加.stop修饰符，即@click.stop</p>
-<h3 id="7、不同页面data会数据复用而不是每个页面有单独的data实例"><a href="#7、不同页面data会数据复用而不是每个页面有单独的data实例" class="headerlink" title="7、不同页面data会数据复用而不是每个页面有单独的data实例"></a>7、不同页面data会数据复用而不是每个页面有单独的data实例</h3><p>用onShow或onUnload钩子进行初始化处理</p>
-<h3 id="8、向公共组件传输的数据在页面切换之间不会更新"><a href="#8、向公共组件传输的数据在页面切换之间不会更新" class="headerlink" title="8、向公共组件传输的数据在页面切换之间不会更新"></a>8、向公共组件传输的数据在页面切换之间不会更新</h3><p>使用watch监听</p>
-<h3 id="9、v-for嵌套列表需要指定不同的index"><a href="#9、v-for嵌套列表需要指定不同的index" class="headerlink" title="9、v-for嵌套列表需要指定不同的index"></a>9、v-for嵌套列表需要指定不同的index</h3><p>mpvue默认v-for的索引名称为index，需要手动修改</p>
-<h2 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h2><h3 id="1、new-Date-XXX-提示NaN"><a href="#1、new-Date-XXX-提示NaN" class="headerlink" title="1、new Date(XXX) 提示NaN"></a>1、new Date(XXX) 提示NaN</h3><p>数据库中提取的XXX是字符串，需要转换成数字类型</p>
-<h3 id="2、placeholer使用iconfont"><a href="#2、placeholer使用iconfont" class="headerlink" title="2、placeholer使用iconfont"></a>2、placeholer使用iconfont</h3><p>添加placeholder-class为iconfont和icon类</p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -178,31 +148,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -237,8 +182,8 @@
     <ul class="list-inline">
       <li>
         &copy;
-        2020
-        John Doe
+        2019-2020
+        Yang
       </li>
       <li>
         
@@ -284,7 +229,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="观海"></a>
   </div>
   
   <ul class="nav nav-main">
